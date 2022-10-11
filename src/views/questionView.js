@@ -15,10 +15,14 @@ export const createQuestionElement = (question) => {
     <ul id="${ANSWERS_LIST_ID}">
     </ul>
 
-    <button id="${NEXT_QUESTION_BUTTON_ID}">
+    <button hidden id="${NEXT_QUESTION_BUTTON_ID}">
       Next question
     </button>
   `;
-
   return element;
 };
+
+export const showNextQuestionButton = () => {
+  const hiddenButton = document.getElementById(NEXT_QUESTION_BUTTON_ID);
+  hiddenButton.hidden = false;
+}

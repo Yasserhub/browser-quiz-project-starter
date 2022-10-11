@@ -4,6 +4,7 @@ import {
   USER_INTERFACE_ID,
 } from '../constants.js';
 import { createQuestionElement } from '../views/questionView.js';
+import { showNextQuestionButton } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
 import { createProgressElement } from '../views/progressView.js';
@@ -48,4 +49,5 @@ const nextQuestion = () => {
 
 export const selectedAnswer = (e) => {
   selectAnswerVariant(e.target, rightAnswer);
+  showNextQuestionButton();
 };
