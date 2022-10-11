@@ -7,11 +7,12 @@ import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
 import { createProgressElement } from '../views/progressView.js';
+import { selectAnswerVariant } from '../views/selectedAnswerView.js';
 
+let rightAnswer;
 
 
 export const initQuestionPage = () => {
-
   const userInterface = document.getElementById(USER_INTERFACE_ID);
   userInterface.innerHTML = '';
 
@@ -28,6 +29,12 @@ export const initQuestionPage = () => {
   for (const [key, answerText] of Object.entries(currentQuestion.answers)) {
     const answerElement = createAnswerElement(key, answerText);
     answersListElement.appendChild(answerElement);
+
+    answerElement.addEventListener('click', selectedAnswer);
+
+    if (key === currentQuestion.correct) {
+      rightAnswer = answerElement;
+    }
   }
 
   document
@@ -40,12 +47,12 @@ const nextQuestion = () => {
   initQuestionPage();
 };
 
-const hiddenButton = document.getElementById(NEXT_QUESTION_BUTTON_ID)
-hiddenButton.hidden = true;
 const showNextQuestionButton = () => {
-  answersListElement.onclick = ()=>{
-hiddenButton.hidden = false; 
-}}
-showNextQuestionButton()
+  const hiddenButton = document.getElementById(NEXT_QUESTION_BUTTON_ID);
+  hiddenButton.hidden = false;
+}
 
-
+export const selectedAnswer = (e) => {
+  selectAnswerVariant(e.target, rightAnswer);
+  showNextQuestionButton();
+};
