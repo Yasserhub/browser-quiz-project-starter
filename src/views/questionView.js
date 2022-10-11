@@ -22,10 +22,4 @@ export const createQuestionElement = (question) => {
   return element;
 };
 
-export const showHideNextQuestionButton = () => {
-const hiddenButton = document.getElementById('${ANSWERS_LIST_ID}')
-hiddenButton.hidden = true;
-document.getElementById('${ANSWERS_LIST_ID}').onclick =()=>{
-  hiddenButton.hidden = false; 
-}
-}
+
