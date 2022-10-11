@@ -19,6 +19,13 @@ export const createQuestionElement = (question) => {
       Next question
     </button>
   `;
-
   return element;
 };
+
+export const showHideNextQuestionButton = () => {
+const hiddenButton = document.getElementById('${ANSWERS_LIST_ID}')
+hiddenButton.hidden = true;
+document.getElementById('${ANSWERS_LIST_ID}').onclick =()=>{
+  hiddenButton.hidden = false; 
+}
+}
