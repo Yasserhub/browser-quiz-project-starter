@@ -4,13 +4,13 @@ import {
   USER_INTERFACE_ID,
 } from '../constants.js';
 import { createQuestionElement } from '../views/questionView.js';
+import { showNextQuestionButton } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
 import { createProgressElement } from '../views/progressView.js';
 import { selectAnswerVariant } from '../views/selectedAnswerView.js';
 
 let rightAnswer;
-
 
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
@@ -46,11 +46,6 @@ const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
   initQuestionPage();
 };
-
-const showNextQuestionButton = () => {
-  const hiddenButton = document.getElementById(NEXT_QUESTION_BUTTON_ID);
-  hiddenButton.hidden = false;
-}
 
 export const selectedAnswer = (e) => {
   selectAnswerVariant(e.target, rightAnswer);
