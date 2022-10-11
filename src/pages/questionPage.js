@@ -7,6 +7,7 @@ import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
 import { createProgressElement } from '../views/progressView.js';
+import { showHideNextQuestionButton } from '../views/questionView.js';
 
 
 export const initQuestionPage = () => {
@@ -38,3 +39,4 @@ const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
   initQuestionPage();
 };
+showHideNextQuestionButton ()
