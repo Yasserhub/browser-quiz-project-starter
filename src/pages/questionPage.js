@@ -5,6 +5,7 @@ import {
 } from '../constants.js';
 import { createQuestionElement } from '../views/questionView.js';
 import { showNextQuestionButton } from '../views/questionView.js';
+import { answerButtonDisable } from '../views/answerView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
 import { createProgressElement } from '../views/progressView.js';
@@ -47,7 +48,8 @@ const nextQuestion = () => {
   initQuestionPage();
 };
 
-export const selectedAnswer = (e) => {
-  selectAnswerVariant(e.target, rightAnswer);
+export function selectedAnswer() {
+  selectAnswerVariant(this, rightAnswer);
   showNextQuestionButton();
-};
+  answerButtonDisable();
+}
