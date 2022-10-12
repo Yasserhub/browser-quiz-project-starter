@@ -27,4 +27,4 @@ export const showNextQuestionButton = () => {
   const hiddenButton = document.getElementById(NEXT_QUESTION_BUTTON_ID);
   hiddenButton.classList.add('hidden-button');
   hiddenButton.hidden = false;
-}
+};
