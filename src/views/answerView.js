@@ -4,16 +4,16 @@
  */
 export const createAnswerElement = (key, answerText) => {
   const element = document.createElement('li');
-
   element.innerHTML = String.raw`
     <button class="answers" id=${key}>${key}: ${answerText}</button>
-`;
+  `;
+
   return element;
 };
 
 export const answerButtonDisable = () => {
-  const buttonDeActivation= document.querySelectorAll('.answers');
+  const buttonDeActivation = document.querySelectorAll('.answers');
   buttonDeActivation.forEach((buttonDeactive) => {
-   buttonDeactive.disabled=true;
+    buttonDeactive.disabled = true;
   });
 };

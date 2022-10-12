@@ -48,8 +48,8 @@ const nextQuestion = () => {
   initQuestionPage();
 };
 
-export const selectedAnswer = (e) => {
-  selectAnswerVariant(e.target, rightAnswer);
+export function selectedAnswer() {
+  selectAnswerVariant(this, rightAnswer);
   showNextQuestionButton();
   answerButtonDisable();
-};
+}

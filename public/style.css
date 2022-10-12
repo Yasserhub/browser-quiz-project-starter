@@ -16,14 +16,14 @@ ul {
   list-style: none;
 }
 
-.selected-green {
+.selected-green .answers {
   color: green;
 }
 
-.selected-red {
+.selected-red .answers {
   color: red;
 }
 
-.border {
+.border .answers {
   border: 1px solid green;
 }
