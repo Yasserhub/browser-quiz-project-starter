@@ -1,9 +1,21 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0;
+  background-size: 400% ;
+  background: linear-gradient(45deg,white,  #9CECFB, #65C7F7,#0052D4 );
+  animation: gradientBody 5s  infinite linear;
+}
 .centered {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  box-shadow: 10px 10px 10px 10px lightblue;
+  background-color: white;
 }
 
 .scrollable {
@@ -26,4 +38,15 @@ ul {
 
 .border {
   border: 1px solid green;
+}
+@keyframes gradientBody {
+  0% {
+    background-position: 80% 0%
+  }
+  50% {
+    background-position: 20% 100%;
+  }
+  100% {
+    background-position: 80% 0%
+  }
 }
