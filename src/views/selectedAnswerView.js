@@ -1,9 +1,4 @@
 export const selectAnswerVariant = (selectedElement, rightAnswer) => {
-  console.log({
-    selectedElement,
-    rightAnswer,
-  });
-
   if (selectedElement === rightAnswer) {
     selectedElement.classList.add('selected-green');
   } else {
