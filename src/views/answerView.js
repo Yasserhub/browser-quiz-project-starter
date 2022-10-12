@@ -5,7 +5,7 @@
 export const createAnswerElement = (key, answerText) => {
   const element = document.createElement('li');
   element.innerHTML = String.raw`
-    <button class="answers" id=${key}>${key}: ${answerText}</button>
+    <button class="answers">${answerText}</button>
   `;
 
   return element;
