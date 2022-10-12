@@ -4,8 +4,8 @@ html, body {
 }
 body {
   margin: 0;
-  background-size: 400% ;
   background: linear-gradient(45deg,white,  #9CECFB, #65C7F7,#0052D4 );
+  background-size: 200% ;
   animation: gradientBody 5s  infinite linear;
 }
 .centered {
@@ -14,6 +14,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  padding: 20px;
   box-shadow: 10px 10px 10px 10px lightblue;
   background-color: white;
 }
