@@ -45,8 +45,9 @@ ul {
   display: flex;
   flex-direction: column;
   height: 60%;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
+
 
 .selected-green .answers {
   color: green;
@@ -75,7 +76,7 @@ ul {
   order: 2;
   text-align: center;
   margin-top: 0;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -87,7 +88,7 @@ h2 {
 
 .answers {
   order: 3;
-  background-color: #9cecfb;
+  background: linear-gradient(to right, white, #9cecfb, #65c7f7, #9cecfb, white);
 }
 
 button {
@@ -97,10 +98,11 @@ button {
   border-radius: 4px;
   box-shadow: 5px 5px 7px lightgray;
   font-size: clamp(1rem, 1.5vw, 2rem);
+  margin: 7px;
 }
 
 .hidden-button {
-  background-color: #65c7f7;
+  background: linear-gradient(to right, white, #f1ce8d, #f5954b,  #f1ce8d,  white);
 }
 
 .hidden-button:hover,
@@ -125,7 +127,7 @@ button {
     color: #9cecfb;
   }
   50% {
-    color: grey;
+    color: #0052d4;
   }
   100% {
     color: #9cecfb;
