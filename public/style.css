@@ -12,7 +12,6 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 400;
-
   margin: 0;
   background: linear-gradient(45deg, white, #9cecfb, #65c7f7, #0052d4);
   background-size: 200%;
@@ -24,10 +23,23 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
+  width: 40rem;
+  height: 80vh;
+  /* text-align: center; */
   padding: 20px;
   box-shadow: 10px 10px 10px 10px lightblue;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+button {
+  width: 90%;
+  margin: 5px;
+  padding: 12px 28px;
+  font-size: 16px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  box-shadow: 5px 5px 7px lightgray;
 }
 
 .scrollable {
@@ -73,6 +85,39 @@ ul {
 
 .hidden-button:hover {
   opacity: 0.7;
+}
+.welc {
+  font-size: 60px;
+  font-weight: 900;
+  letter-spacing: 8px;
+  animation: welcome 3s 1;
+  color:  #0052d4;
+  text-transform: uppercase;
+}
+#start-quiz-button {
+  background-color: #9CECFB;
+  box-shadow: 5px 5px 5px 5px lightblue;
+  text-transform: uppercase;
+}
+#start-quiz-button:hover {
+  width:99%;
+  font-size: 30px;
+  background-color: #0052d4;
+  color: white;
+  letter-spacing: 8px;
+  font-weight: 900;
+}
+
+@keyframes welcome {
+  0% {
+    margin-top: -100%;
+  }
+  30% {
+    letter-spacing: 25PX;
+  }
+  85% {
+    letter-spacing: 8px;
+  }
 }
 
 @keyframes gradientBody {
