@@ -47,12 +47,6 @@ export const initQuestionPage = () => {
 const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
   initQuestionPage(); 
-  //
-  if (quizData.currentQuestionIndex === quizData.questions.length - 1) {
-    //localStorage.clear();
-    finalSummaryPage();
-    return;
-  } 
 };
 
 export function selectedAnswer() {
