@@ -86,13 +86,19 @@ ul {
 .hidden-button:hover {
   opacity: 0.7;
 }
+
 .welc {
+  justify-content: center;
+  display: flex;
+  width: 100%;
   font-size: 60px;
   font-weight: 900;
   letter-spacing: 8px;
   animation: welcome 3s 1;
   color:  #0052d4;
   text-transform: uppercase;
+  text-align: center;
+ 
 }
 #start-quiz-button {
   background-color: #9CECFB;
@@ -106,6 +112,7 @@ ul {
   color: white;
   letter-spacing: 8px;
   font-weight: 900;
+  border-radius: 50%;
 }
 
 @keyframes welcome {
