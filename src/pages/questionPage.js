@@ -10,6 +10,7 @@ import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
 import { createProgressElement } from '../views/progressView.js';
 import { selectAnswerVariant } from '../views/selectedAnswerView.js';
+import { disabledButton } from '../views/questionView.js';
 
 let rightAnswer;
 
@@ -35,14 +36,16 @@ export const initQuestionPage = () => {
 
     if (key === currentQuestion.correct) {
       rightAnswer = answerElement;
-    }
+    };
+    if (!answerElement.addEventListener('click', selectedAnswer)) {
+      setTimeout (disabledButton, 2000)
   }
 
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
     .addEventListener('click', nextQuestion);
 };
-
+}
 const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
   initQuestionPage();
@@ -52,4 +55,5 @@ export function selectedAnswer() {
   selectAnswerVariant(this, rightAnswer);
   showNextQuestionButton();
   answerButtonDisable();
-}
+};
+
