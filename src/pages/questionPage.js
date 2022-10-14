@@ -10,6 +10,7 @@ import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
 import { createProgressElement } from '../views/progressView.js';
 import { selectAnswerVariant } from '../views/selectedAnswerView.js';
+import { finalSummaryPage } from '../pages/finalPage.js';
 
 let rightAnswer;
 
@@ -45,6 +46,12 @@ export const initQuestionPage = () => {
 
 const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
+
+  if (quizData.currentQuestionIndex === quizData.questions.length) {
+    finalSummaryPage();
+    return;
+  }
+
   initQuestionPage();
 };
 
