@@ -10,7 +10,7 @@ import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
 import { createProgressElement } from '../views/progressView.js';
 import { selectAnswerVariant } from '../views/selectedAnswerView.js';
-import { disabledButton } from '../views/questionView.js';
+import { disabledAllAnswers } from '../views/questionView.js';
 
 let rightAnswer;
 
@@ -38,7 +38,7 @@ export const initQuestionPage = () => {
       rightAnswer = answerElement;
     };
     if (!answerElement.addEventListener('click', selectedAnswer)) {
-      setTimeout (disabledButton, 2000)
+      setTimeout (disabledAllAnswers, 2000)
   }
 
   document
