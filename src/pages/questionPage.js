@@ -5,7 +5,7 @@ import {
 } from '../constants.js';
 import { createQuestionElement } from '../views/questionView.js';
 import { showNextQuestionButton } from '../views/questionView.js';
-//import { answerButtonDisable } from '../views/answerView.js';
+import { answerButtonDisable } from '../views/answerView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
 import { createProgressElement } from '../views/progressView.js';
@@ -37,13 +37,18 @@ export const initQuestionPage = () => {
     if (key === currentQuestion.correct) {
       rightAnswer = answerElement;
     };
-    
-      setTimeout (nextQuestion, 2000)
   }
 
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
     .addEventListener('click', nextQuestion);
+    const timeoutID = setTimeout(() => {
+      showNextQuestionButton();
+      answerButtonDisable();
+    }, 2000);
+   if (selectedAnswer()){
+    clearTimeout(timeoutID);
+   }
 };
 
 const nextQuestion = () => {
