@@ -91,6 +91,14 @@ h2 {
   background: linear-gradient(to right, white, #9cecfb, #65c7f7, #9cecfb, white);
 }
 
+.score-view {
+  font-size: 27px;
+  font-weight: 300;
+  position: absolute;
+  top: 3%;
+  left: 40%;
+}
+
 button {
   width: 90%;
   padding: 12px 28px;
