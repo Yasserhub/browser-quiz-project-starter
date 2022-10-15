@@ -5,12 +5,12 @@ import {
 } from '../constants.js';
 import { createQuestionElement } from '../views/questionView.js';
 import { showNextQuestionButton } from '../views/questionView.js';
-import { answerButtonDisable } from '../views/answerView.js';
+//import { answerButtonDisable } from '../views/answerView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
 import { createProgressElement } from '../views/progressView.js';
 import { selectAnswerVariant } from '../views/selectedAnswerView.js';
-import { disabledAllAnswers } from '../views/questionView.js';
+
 
 let rightAnswer;
 
@@ -37,15 +37,15 @@ export const initQuestionPage = () => {
     if (key === currentQuestion.correct) {
       rightAnswer = answerElement;
     };
-    if (!answerElement.addEventListener('click', selectedAnswer)) {
-      setTimeout (disabledAllAnswers, 2000)
+    
+      setTimeout (nextQuestion, 2000)
   }
 
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
     .addEventListener('click', nextQuestion);
 };
-}
+
 const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
   initQuestionPage();

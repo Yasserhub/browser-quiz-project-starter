@@ -11,9 +11,4 @@ export const createAnswerElement = (key, answerText) => {
   return element;
 };
 
-export const answerButtonDisable = () => {
-  const buttonDeActivation = document.querySelectorAll('.answers');
-  buttonDeActivation.forEach((buttonDeactive) => {
-    buttonDeactive.disabled = true;
-  });
-};
+
