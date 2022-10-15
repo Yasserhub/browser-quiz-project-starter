@@ -29,6 +29,6 @@ export const showNextQuestionButton = () => {
   hiddenButton.hidden = false;
 };
 export const disabledAllAnswers = () => {
-  const element = document.getElementById(ANSWERS_LIST_ID)
+  const element = document.getElementById(ANSWERS_LIST_ID);
   element.disabled = true;
-}
+};
