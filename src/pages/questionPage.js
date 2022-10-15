@@ -52,9 +52,11 @@ export const initQuestionPage = () => {
 
 const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
+  localStorage.setItem('questionNumber', JSON.stringify(quizData.currentQuestionIndex));
 
   if (quizData.currentQuestionIndex === quizData.questions.length) {
     finalSummaryPage();
+    localStorage.clear();
     return;
   }
 

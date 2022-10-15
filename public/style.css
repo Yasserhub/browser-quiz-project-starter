@@ -12,7 +12,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   margin: 0;
-  background: linear-gradient(45deg, white, #9cecfb, #65c7f7, #0052d4);
+  background: linear-gradient(45deg, white, #9cecfb);
   background-size: 200%;
   animation: gradientBody 5s infinite linear;
 }
@@ -25,8 +25,6 @@ body {
   width: 60%;
   height: 80vh;
   padding: 20px;
-  box-shadow: 10px 10px 10px 10px lightblue;
-  background-color: white;
   display: flex;
   flex-direction: column;
 }
@@ -100,7 +98,7 @@ h2 {
 }
 
 button {
-  width: 90%;
+  width: 100%;
   padding: 12px 28px;
   border: 1px solid lightgray;
   border-radius: 4px;

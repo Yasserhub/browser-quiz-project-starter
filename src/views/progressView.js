@@ -26,9 +26,7 @@ export const createScoreElement = () => {
 
 };
 
-
 export const updateScore = () => {
   const element = document.getElementById("Score")
   element.innerText = quizData.finalScore;
-
 };
