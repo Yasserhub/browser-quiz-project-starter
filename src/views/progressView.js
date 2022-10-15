@@ -30,3 +30,15 @@ export const updateScore = () => {
   const element = document.getElementById("Score")
   element.innerText = quizData.finalScore;
 };
+
+export const progressElement = () => {
+  const percentage = (quizData.currentQuestionIndex / quizData.questions.length) * 100;
+  const element = document.createElement ('div');
+
+  element.innerHTML = String.raw`
+    <progress class="progress-bar" max="100" value="${percentage}">
+  `;
+
+
+  return element;
+};
