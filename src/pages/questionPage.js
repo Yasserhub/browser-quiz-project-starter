@@ -17,6 +17,7 @@ import { createScoreElement } from '../views/progressView.js';
 import { progressElement } from '../views/progressView.js';
 
 let rightAnswer;
+let timeoutID;
 
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
@@ -52,11 +53,20 @@ export const initQuestionPage = () => {
   document
     .getElementById(NEXT_QUESTION_BUTTON_ID)
     .addEventListener('click', nextQuestion);
+
+  timeoutID = setTimeout(() => {
+    showNextQuestionButton();
+    answerButtonDisable();
+    clearTimeout(timeoutID);
+  }, 15000);
 };
 
 const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
-  localStorage.setItem('questionNumber', JSON.stringify(quizData.currentQuestionIndex));
+  localStorage.setItem(
+    'questionNumber',
+    JSON.stringify(quizData.currentQuestionIndex)
+  );
 
   if (quizData.currentQuestionIndex === quizData.questions.length) {
     finalSummaryPage();
@@ -68,6 +78,7 @@ const nextQuestion = () => {
 };
 
 export function selectedAnswer() {
+  clearTimeout(timeoutID);
   selectAnswerVariant(this, rightAnswer);
   showNextQuestionButton();
   answerButtonDisable();

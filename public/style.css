@@ -25,7 +25,6 @@ body {
   transition-timing-function: ease;
 }
 
-
 .centered {
   position: fixed;
   top: 50%;
@@ -54,7 +53,6 @@ ul {
   height: 60%;
   justify-content: space-evenly;
 }
-
 
 .selected-green .answers {
   color: green;
@@ -95,7 +93,19 @@ h2 {
 
 .answers {
   order: 3;
-  background: linear-gradient(to right, white, #9cecfb, #65c7f7, #9cecfb, white);
+  background: linear-gradient(
+    to right,
+    white,
+    #9cecfb,
+    #65c7f7,
+    #9cecfb,
+    white
+  );
+  cursor: pointer;
+}
+
+.answers[disabled] {
+  pointer-events: none;
 }
 
 .score-view {
@@ -117,7 +127,14 @@ button {
 }
 
 .hidden-button {
-  background: linear-gradient(to right, white, #f1ce8d, #f5954b,  #f1ce8d,  white);
+  background: linear-gradient(
+    to right,
+    white,
+    #f1ce8d,
+    #f5954b,
+    #f1ce8d,
+    white
+  );
 }
 
 .hidden-button:hover,
@@ -165,5 +182,4 @@ button {
     padding: 10px 22px;
     font-size: clamp(0.8rem, 1vw, 1.5rem);
   }
-
 }
