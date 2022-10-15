@@ -14,6 +14,7 @@ import { finalSummaryPage } from '../pages/finalPage.js';
 
 import { updateScore } from '../views/progressView.js';
 import { createScoreElement } from '../views/progressView.js';
+import { progressElement } from '../views/progressView.js';
 
 let rightAnswer;
 
@@ -31,6 +32,9 @@ export const initQuestionPage = () => {
 
   const scoreOfCorrectAnswers = createScoreElement();
   userInterface.appendChild(scoreOfCorrectAnswers);
+
+  const progressTage = progressElement();
+  userInterface.appendChild(progressTage);
 
   const answersListElement = document.getElementById(ANSWERS_LIST_ID);
 
