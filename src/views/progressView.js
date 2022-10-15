@@ -17,7 +17,7 @@ export const createScoreElement = () => {
   const element = document.createElement('div');
   element.classList.add('score-view');
   element.innerHTML = String.raw`
-  <p>Score <span id="Score">${quizData.finalScore}</span> of ${quizData.questions.length}</p>
+  <p>Score <span class ="score" id="Score">${quizData.finalScore} &#128512;</span> of ${quizData.questions.length}</p>
 `;
 
   return element;
