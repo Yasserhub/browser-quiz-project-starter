@@ -28,7 +28,3 @@ export const showNextQuestionButton = () => {
   hiddenButton.classList.add('hidden-button');
   hiddenButton.hidden = false;
 };
-export const disabledAllAnswers = () => {
-  const element = document.getElementById(ANSWERS_LIST_ID);
-  element.disabled = true;
-};
