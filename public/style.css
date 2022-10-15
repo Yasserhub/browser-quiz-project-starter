@@ -142,6 +142,53 @@ button {
   opacity: 0.7;
 }
 
+.welc {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  font-size: 60px;
+  font-weight: 900;
+  letter-spacing: 8px;
+  animation: welcome 3s 1;
+  color:  #0052d4;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.welkome {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+#start-quiz-button {
+  background-color: #9CECFB;
+  box-shadow: 5px 5px 5px 5px lightblue;
+  text-transform: uppercase;
+}
+
+#start-quiz-button:hover {
+  width:99%;
+  font-size: 30px;
+  background-color: #0052d4;
+  color: white;
+  letter-spacing: 8px;
+  font-weight: 900;
+  border-radius: 50%;
+}
+
+@keyframes welcome {
+  0% {
+    margin-top: -100%;
+  }
+  30% {
+    letter-spacing: 25PX;
+  }
+  85% {
+    letter-spacing: 8px;
+  }
+}
+
 @keyframes gradientBody {
   0% {
     background-position: 80% 0%;
