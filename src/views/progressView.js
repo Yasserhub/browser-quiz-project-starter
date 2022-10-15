@@ -12,3 +12,23 @@ export const createProgressElement = () => {
   `;
   return element;
 };
+
+export const createScoreElement = () => {
+  const element = document.createElement('div');
+  element.classList.add('score-view');
+  element.innerHTML = String.raw`
+  <p>Score <span id="Score">${quizData.finalScore}</span> of ${
+   quizData.questions.length
+  }</p>
+`;
+
+  return element;
+
+};
+
+
+export const updateScore = () => {
+  const element = document.getElementById("Score")
+  element.innerText = quizData.finalScore;
+
+};

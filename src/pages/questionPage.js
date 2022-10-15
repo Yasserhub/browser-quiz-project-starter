@@ -12,6 +12,9 @@ import { createProgressElement } from '../views/progressView.js';
 import { selectAnswerVariant } from '../views/selectedAnswerView.js';
 import { finalSummaryPage } from '../pages/finalPage.js';
 
+import { updateScore } from '../views/progressView.js';
+import { createScoreElement } from '../views/progressView.js';
+
 let rightAnswer;
 
 export const initQuestionPage = () => {
@@ -25,6 +28,9 @@ export const initQuestionPage = () => {
 
   const progressBlock = createProgressElement();
   userInterface.appendChild(progressBlock);
+
+  const scoreOfCorrectAnswers = createScoreElement();
+  userInterface.appendChild(scoreOfCorrectAnswers);
 
   const answersListElement = document.getElementById(ANSWERS_LIST_ID);
 
@@ -59,4 +65,5 @@ export function selectedAnswer() {
   selectAnswerVariant(this, rightAnswer);
   showNextQuestionButton();
   answerButtonDisable();
+  updateScore();
 }
