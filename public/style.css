@@ -26,7 +26,6 @@ body {
   transition-duration: 5s;
   transition-timing-function: ease;
   line-height: 30px;
-  
 }
 
 .centered {
@@ -163,7 +162,7 @@ button {
   font-weight: 900;
   letter-spacing: 8px;
   animation: welcome 3s 1;
-  color:  #0052d4;
+  color: #0052d4;
   text-transform: uppercase;
   text-align: center;
 }
@@ -175,13 +174,13 @@ button {
 }
 
 #start-quiz-button {
-  background-color: #9CECFB;
+  background-color: #9cecfb;
   box-shadow: 5px 5px 5px 5px lightblue;
   text-transform: uppercase;
 }
 
 #start-quiz-button:hover {
-  width:99%;
+  width: 99%;
   font-size: 30px;
   background-color: #0052d4;
   color: white;
@@ -202,12 +201,12 @@ button {
   animation: fadeInRight 1s ease;
 }
 
-@keyframes fadeInRight{
-  0%{
+@keyframes fadeInRight {
+  0% {
     transform: translateX(40px);
     opacity: 0;
   }
-  100%{
+  100% {
     transform: translateX(0px);
     opacity: 1;
   }
@@ -249,7 +248,7 @@ button {
     margin-top: -100%;
   }
   30% {
-    letter-spacing: 25PX;
+    letter-spacing: 25px;
   }
   85% {
     letter-spacing: 8px;
@@ -296,16 +295,13 @@ button {
     padding: 10px 22px;
     font-size: clamp(0.8rem, 1vw, 1.5rem);
   }
-
 }
 
-@media screen and (min-width:300px) {
-
+@media screen and (min-width: 300px) {
   .score {
     font-size: 1.1em;
-    font-weight:500;
+    font-weight: 500;
     padding-left: 1px;
     padding-right: 1px;
   }
-
 }

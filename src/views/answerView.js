@@ -20,4 +20,4 @@ export const answerButtonDisable = () => {
 
 export const hightlightRightAnswer = (rightAnswer) => {
   rightAnswer.classList.add('selected-green');
-}
+};
