@@ -190,6 +190,60 @@ button {
   border-radius: 50%;
 }
 
+/* here is the result-box of the final results */
+.result-box {
+  width: 100vh;
+  text-align: center;
+  max-width: 700px;
+  background-color: #ffffff;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  animation: fadeInRight 1s ease;
+}
+
+@keyframes fadeInRight{
+  0%{
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.result-box h1 {
+  margin: 1px auto;
+  font-size: 36px;
+  line-height: 42px;
+  color: #009688;
+}
+
+.result-box h2 {
+  /*margin: 1px auto;*/
+  font-size: 26px;
+  /*line-height: 42px;*/
+  color: #444444;
+  animation: fadeInRight 1s ease;
+}
+
+.result-box table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2px 0;
+}
+
+.result-box table td {
+  border: 1px solid #cccccc;
+  padding: 8px 15px;
+  font-weight: 500;
+  color: #000000;
+  width: 50%;
+  text-align: left;
+  font-size: 18px;
+}
+
 @keyframes welcome {
   0% {
     margin-top: -100%;
