@@ -17,3 +17,7 @@ export const answerButtonDisable = () => {
     buttonDeactive.disabled = true;
   });
 };
+
+export const hightlightRightAnswer = (rightAnswer) => {
+  rightAnswer.classList.add('selected-green');
+}

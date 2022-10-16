@@ -7,6 +7,7 @@ import { createQuestionElement } from '../views/questionView.js';
 import { showNextQuestionButton } from '../views/questionView.js';
 import { answerButtonDisable } from '../views/answerView.js';
 import { createAnswerElement } from '../views/answerView.js';
+import { hightlightRightAnswer } from '../views/answerView.js';
 import { quizData } from '../data.js';
 import { createProgressElement } from '../views/progressView.js';
 import { selectAnswerVariant } from '../views/selectedAnswerView.js';
@@ -55,6 +56,7 @@ export const initQuestionPage = () => {
     .addEventListener('click', nextQuestion);
 
   timeoutID = setTimeout(() => {
+    hightlightRightAnswer(rightAnswer);
     showNextQuestionButton();
     answerButtonDisable();
     clearTimeout(timeoutID);
