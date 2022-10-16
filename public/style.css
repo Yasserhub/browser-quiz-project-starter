@@ -18,11 +18,15 @@ body {
 }
 
 .progress-bar {
+  position: relative;
+  margin-top: 28px;
   width: 100%;
-  height: 20px;
+  height: 10px;
   text-align: center;
   transition-duration: 5s;
   transition-timing-function: ease;
+  line-height: 30px;
+  
 }
 
 .centered {
@@ -112,8 +116,16 @@ h2 {
   font-size: 27px;
   font-weight: 300;
   position: absolute;
-  top: 3%;
+  top: -7%;
   left: 40%;
+}
+
+.score {
+  color: green;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 button {
@@ -230,4 +242,16 @@ button {
     padding: 10px 22px;
     font-size: clamp(0.8rem, 1vw, 1.5rem);
   }
+
+}
+
+@media screen and (min-width:300px) {
+
+  .score {
+    font-size: 1.1em;
+    font-weight:500;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+
 }
