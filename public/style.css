@@ -127,6 +127,7 @@ button {
 }
 
 .hidden-button {
+  margin-top: 15px;
   background: linear-gradient(
     to right,
     white,
