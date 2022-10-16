@@ -1,3 +1,5 @@
+import { ANSWERS_LIST_ID } from '../constants.js';
+
 /**
  * Create an Answer element
  * @returns {Element}
@@ -12,6 +14,11 @@ export const createAnswerElement = (key, answerText) => {
 };
 
 export const answerButtonDisable = () => {
+  const list = document.querySelectorAll(`#${ANSWERS_LIST_ID} li`);
+  list.forEach((li) => {
+    li.classList.add('disabled');
+  });
+
   const buttonDeActivation = document.querySelectorAll('.answers');
   buttonDeActivation.forEach((buttonDeactive) => {
     buttonDeactive.disabled = true;

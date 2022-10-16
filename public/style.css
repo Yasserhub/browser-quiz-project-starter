@@ -107,6 +107,7 @@ h2 {
   cursor: pointer;
 }
 
+.disabled,
 .answers[disabled] {
   pointer-events: none;
 }
